@@ -1,22 +1,17 @@
-import os
 import boto3
-import requests
 
-os.environ.setdefault('AWS_DEFAULT', 'ITV-GitHubUser')
+def get_client():
+    return boto3.client('s3')
 
-s3_client = boto3.client('s3')
+def upload_s3(body, bucket, file):
+    s3_client = get_client()
+    res = s3_client.put_object(
+        Bucket=bucket,
+        Key=file,
+        Body=body
+    )
 
-# s3_objects = s3_client.list_objects(
-#     Bucket='rusichv-itv-github'
-# )
+    return res
 
-file = '2024-01-25-0.json.gz'
-res = requests.get(f'https://data.gharchive.org/{file}')
 
-upload_res = s3_client.put_object(
-    Bucket='rusichv-itv-github',
-    Key='2024-01-25-0.json.gz',
-    Body=res.content
-)
 
-print(upload_res)
