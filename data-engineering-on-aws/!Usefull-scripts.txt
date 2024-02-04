@@ -1,0 +1,26 @@
+====================================================
+Sycnhro time with AWS
+====================================================
+Solution:
+
+sudo apt install ntpdate
+sudo ntpdate -sb time.nist.gov
+Source
+
+To confirm change:
+
+curl http://s3.amazonaws.com -v
+date -u
+Both times should be the same :)
+
+
+
+====================================================
+Create ZIP with Pyhton files for Lambda
+====================================================
+rm ghactivity-downloader.zip
+cd ghalib/
+zip -r ../ghactivity-downloader.zip .
+cd ..
+zip -g ghactivity-downloader.zip download.py lambda_function.py upload.py utils.py
+

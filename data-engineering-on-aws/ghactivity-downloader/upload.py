@@ -1,7 +1,5 @@
-import boto3
+from utils import get_client
 
-def get_client():
-    return boto3.client('s3')
 
 def upload_s3(body, bucket, file):
     s3_client = get_client()
@@ -10,8 +8,4 @@ def upload_s3(body, bucket, file):
         Key=file,
         Body=body
     )
-
     return res
-
-
-
