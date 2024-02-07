@@ -1,6 +1,8 @@
 import os
 from util import get_spark_session
 from read import from_files
+from process import transform
+
 
 def main():
     env = os.environ.get('ENVIRONMENT')   # DEV
@@ -10,8 +12,9 @@ def main():
 
     spark = get_spark_session(env, 'ITV GitHub activity  - Getting Started')
     df = from_files(spark, src_dir, src_file_pattern, src_file_format)
-    df.printSchema()
-    df.select('repo.*').show()
+    df_transformed = transform(df)
+    df_transformed.printSchema()
+    df_transformed.select('repo.*', 'created_at', 'year', 'month', 'day').show()
 
 
 if __name__ == '__main__':
