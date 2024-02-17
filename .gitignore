@@ -168,4 +168,5 @@ data-engineering-on-aws/ghactivity-downloader/.idea
 /data-engineering-on-aws/itv-ghactivity/data/itv-github/landing/ghactivity/
 /data-engineering-on-aws/itv-ghactivity/data/
 dbt-zero-to-hero-duckdb/duck-venv/
+dbt-zero-to-hero-duckdb/data
 dbt-zero-to-hero-snowflake/venv/
