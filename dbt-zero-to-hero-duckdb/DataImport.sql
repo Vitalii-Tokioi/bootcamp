@@ -1,10 +1,12 @@
 -- Create our three tables and import the data from S3
 
+CREATE SCHEMA raw;
+
 
 ------------------------------------
 --raw_listings
 ------------------------------------
-CREATE OR REPLACE TABLE raw_listings
+CREATE OR REPLACE TABLE raw.raw_listings
                     (id integer,
                      listing_url varchar(1000),
                      "name" varchar(1000),
@@ -15,7 +17,7 @@ CREATE OR REPLACE TABLE raw_listings
                      created_at datetime,
                      updated_at datetime);
 
-insert into raw_listings
+insert into raw.raw_listings
 select *
 from read_csv_auto('s3://dbtlearn/listings.csv',
     delim = ',',
@@ -38,7 +40,7 @@ from read_csv_auto('s3://dbtlearn/listings.csv',
 ------------------------------------
 --raw_listings
 ------------------------------------
-CREATE OR REPLACE TABLE raw_reviews
+CREATE OR REPLACE TABLE raw.raw_reviews
                     (listing_id integer,
                      "date" datetime,
                      reviewer_name varchar(1000),
@@ -46,7 +48,7 @@ CREATE OR REPLACE TABLE raw_reviews
                      sentiment varchar(1000));
 
 
-insert into raw_reviews
+insert into raw.raw_reviews
 select *
 from read_csv_auto('s3://dbtlearn/reviews.csv',
     delim = ',',
@@ -64,14 +66,14 @@ from read_csv_auto('s3://dbtlearn/reviews.csv',
 ------------------------------------
 --raw_hosts
 ------------------------------------
-CREATE OR REPLACE TABLE raw_hosts
+CREATE OR REPLACE TABLE raw.raw_hosts
                     (id integer,
                      "name" varchar(1000),
                      is_superhost varchar(100),
                      created_at datetime,
                      updated_at datetime);
 
-insert into raw_hosts
+insert into raw.raw_hosts
 select *
 from read_csv_auto('s3://dbtlearn/hosts.csv',
     delim = ',',
