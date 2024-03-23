@@ -36,6 +36,26 @@ from read_csv_auto('s3://dbtlearn/listings.csv',
 select * from information_schema.tables;
 
 
-select * from dev.src_listings;
+select * from dev.fct_reviews limit 10;
 select * from dev.src_reviews;
+
+.mode line
+SELECT * FROM duckdb_tables where table_name = 'raw_reviews' limit 1;
+.mode duckbox
+
+
+---------------------------------
+drop table dev.fct_reviews;
+select * from dev.fct_reviews;
+
+SELECT * FROM "AIRBNB"."DEV"."FCT_REVIEWS" WHERE listing_id=3176;
+
+INSERT INTO "AIRBNB"."RAW"."RAW_REVIEWS"
+VALUES (3176, CURRENT_TIMESTAMP, 'vt_test', 'excellent stay!', 'positive');
+
+SELECT * FROM "AIRBNB"."RAW"."RAW_REVIEWS" WHERE listing_id=3176 order by 2 desc;  -- and reviewer_name = 'vt_test';
+
+SELECT * FROM "AIRBNB"."DEV"."FCT_REVIEWS" WHERE listing_id=3176 order by 2 desc;  -- and reviewer_name = 'vt_test';
+
+
 
