@@ -38,7 +38,7 @@ from read_csv_auto('s3://dbtlearn/listings.csv',
 
 
 ------------------------------------
---raw_listings
+--raw_reviews
 ------------------------------------
 CREATE OR REPLACE TABLE raw.raw_reviews
                     (listing_id integer,
