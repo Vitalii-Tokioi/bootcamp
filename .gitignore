@@ -170,3 +170,4 @@ data-engineering-on-aws/ghactivity-downloader/.idea
 dbt-zero-to-hero-duckdb/duck-venv/
 dbt-zero-to-hero-duckdb/data
 dbt-zero-to-hero-snowflake/venv/
+dbt-zero-to-hero-duckdb/dbtlearn_duckdb/seeds/seed_full_moon_dates.csv

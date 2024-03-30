@@ -85,3 +85,7 @@ from read_csv_auto('s3://dbtlearn/hosts.csv',
                 'updated_at': 'datetime'
     }
 );
+
+
+
+curl https://dbtlearn.s3.us-east-2.amazonaws.com/seed_full_moon_dates.csv -o seeds/seed_full_moon_dates.csv
