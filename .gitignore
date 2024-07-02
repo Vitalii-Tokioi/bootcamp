@@ -171,3 +171,14 @@ dbt-zero-to-hero-duckdb/duck-venv/
 dbt-zero-to-hero-duckdb/data
 dbt-zero-to-hero-snowflake/venv/
 dbt-zero-to-hero-duckdb/dbtlearn_duckdb/seeds/seed_full_moon_dates.csv
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/history/runs.db
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/history/runs/08270465-573e-4c9b-bd91-e6dda324ca6e.db
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/history/runs/e3f336ec-c73d-461f-9cb7-bfa5f0f2c6bb.db
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/history/runs/index.db
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/schedules/schedules.db
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/storage/08270465-573e-4c9b-bd91-e6dda324ca6e/compute_logs/cinijgsr.complete
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/storage/08270465-573e-4c9b-bd91-e6dda324ca6e/compute_logs/cinijgsr.err
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/storage/08270465-573e-4c9b-bd91-e6dda324ca6e/compute_logs/cinijgsr.out
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/storage/e3f336ec-c73d-461f-9cb7-bfa5f0f2c6bb/compute_logs/avsmvjil.complete
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/storage/e3f336ec-c73d-461f-9cb7-bfa5f0f2c6bb/compute_logs/avsmvjil.err
+dbt-zero-to-hero-duckdb/dbt_dagster_project/tmpztlm86wm/storage/e3f336ec-c73d-461f-9cb7-bfa5f0f2c6bb/compute_logs/avsmvjil.out
